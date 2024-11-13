@@ -284,7 +284,7 @@ proc load_synapses() { local isynapse, nsynapses, ncols, synapse_id, \
             section.sec synapse = new ProbGABAAB_EMS(seg_x)
             synapse.tau_d_GABAA  = tau_d
             rng = new Random()                                                      
-            rng.MCellRan4( isynapse*100000+100, gid+250+base_seed )                
+            rng.Random123( isynapse*100000+100, gid+250+base_seed )
             rng.lognormal(0.2, 0.1)                                                 
             synapse.tau_r_GABAA = rng.repick()
             pre_mtypes_excinh.x[pre_mtype] = 1                      
@@ -317,7 +317,7 @@ proc load_synapses() { local isynapse, nsynapses, ncols, synapse_id, \
 
         // Create the random number generator for the synapse
         rng = new Random()                                                          
-        rng.MCellRan4( isynapse*100000+100, gid+250+base_seed )                    
+        rng.Random123( isynapse*100000+100, gid+250+base_seed )
         rng.uniform(0,1)                                                            
         synapse.setRNG( rng )                                                       
         rng_list.append(rng)        

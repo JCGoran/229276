@@ -258,7 +258,7 @@ proc re_init_rng() {local channelID
             rng = new Random()
             // Set the seeds to a value that depends on the gid of the cell
             // and the channelid within the cell
-            rng.MCellRan4( channelID*10000+100, $1*10000+250+1 )
+            rng.Random123( channelID*10000+100, $1*10000+250+1 )
             channelID = channelID + 1
             // Set to uniform distribution
             rng.uniform(0,1)
@@ -275,7 +275,7 @@ proc re_init_rng() {local channelID
     forsec this.basal {
         for (x, 0) {
             rng = new Random()
-            rng.MCellRan4( channelID*10000+100, $1*10000+250+1 )
+            rng.Random123( channelID*10000+100, $1*10000+250+1 )
             channelID = channelID + 1
             rng.uniform(0,1)
             setdata_StochKv(x)
@@ -287,7 +287,7 @@ proc re_init_rng() {local channelID
     forsec this.apical {
         for (x, 0) {
             rng = new Random()
-            rng.MCellRan4( channelID*10000+100, $1*10000+250+1 )
+            rng.Random123( channelID*10000+100, $1*10000+250+1 )
             channelID = channelID + 1
             rng.uniform(0,1)
             setdata_StochKv(x)
