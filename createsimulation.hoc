@@ -90,6 +90,7 @@ proc create_cell() { local synapses_enabled
 
 synapses_enabled = $1
 semente = new Random($2)
+semente.Random123()
 semente.uniform(0,1000000000)
 
 NUMBER_NEURONS = $3
