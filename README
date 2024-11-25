@@ -53,3 +53,5 @@ Changelog
 
 20240226 Replace NetStim.seed with NetStim.noiseFromRandom123.<br>
     This gives result identity between 8.2 and 9.0
+
+2024-11: Updated hoc files to use Random123
